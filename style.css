@@ -49,6 +49,7 @@ main {
   position: fixed;
   background: #232323;
   transition: max-width 0.5s ease-out;
+  z-index: 90;
 }
 
 .nav-link {
@@ -80,6 +81,7 @@ main {
   width: 24px;
   position: relative;
   z-index: 5;
+  z-index: 100;
 }
 
 .hamburger-line::before,
@@ -121,6 +123,24 @@ main {
   max-width: 100%;
 }
 
+/* Hero */
+.hero {
+  width: 100%;
+  height: 725px;
+}
+
+.hero-image {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background-image: url("./public/img/senior-man-nursing-home-with-doing-physical-therapy-with-help-from-nurse-using-dumbbells.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  object-position: center top;
+}
+
+/* Desktop */
 @media screen and (min-width: 768px) {
   .nav-menu {
     flex-direction: row;
@@ -136,5 +156,11 @@ main {
 
   #logo {
     max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 2500px) {
+  .hero {
+    height: 1200px;
   }
 }
