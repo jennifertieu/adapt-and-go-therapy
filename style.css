@@ -127,6 +127,7 @@ main {
 .hero {
   width: 100%;
   height: 725px;
+  position: relative;
 }
 
 .hero-image {
@@ -138,6 +139,49 @@ main {
   background-repeat: no-repeat;
   background-position: center;
   object-position: center top;
+}
+
+.hero-cover {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.hero-heading {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+}
+
+.hero-text {
+  font-weight: 300;
+  font-size: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.hero-button {
+  border-radius: 8px;
+  padding: 1rem 2.5rem;
+  background-color: #6a80e6;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+}
+
+.hero-button:hover {
+  background-color: #4c67e0;
 }
 
 /* Desktop */
@@ -157,8 +201,21 @@ main {
   #logo {
     max-width: 100%;
   }
+
+  .hero-heading {
+    font-size: 3.5rem;
+  }
+
+  .hero-text {
+    font-size: 2rem;
+  }
+
+  .hero-button {
+    font-size: 1.5rem;
+  }
 }
 
+/* Large Screen */
 @media screen and (min-width: 2500px) {
   .hero {
     height: 1200px;
