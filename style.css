@@ -4,8 +4,8 @@
   box-sizing: border-box;
   --adapt-black: #232323;
   --gold-bg: #c17b00;
-  --button-bg: #6a80e6;
-  --button-bg-hover: #4c67e0;
+  --purple-bg: #6a80e6;
+  --purple-bg-hover: #4c67e0;
   --light-link: #add8e6;
 }
 
@@ -181,14 +181,15 @@ main {
 .hero-button {
   border-radius: 8px;
   padding: 1rem 2.5rem;
-  background-color: var(--button-bg);
+  background-color: var(--purple-bg);
   color: #fff;
   font-size: 1rem;
   border: none;
+  text-decoration: none;
 }
 
 .hero-button:hover {
-  background-color: var(--button-bg-hover);
+  background-color: var(--purple-bg-hover);
 }
 
 /* About */
@@ -349,7 +350,7 @@ main {
 /* Contact */
 .contact {
   width: 100%;
-  padding: 4rem 0;
+  padding: 4rem 2rem;
   background-color: var(--adapt-black);
   color: #fff;
 }
@@ -360,11 +361,12 @@ main {
 }
 
 .contact a {
-  color: var(--light-link);
+  color: var(--purple-bg);
 }
 
 .contact-content {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 2rem;
@@ -381,6 +383,32 @@ main {
 
 .contact-content__details h4 {
   margin: 0.5rem 0;
+}
+
+#logo-large {
+  max-width: 100%;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--adapt-black);
+  color: #fff;
+  padding: 1.5em 1rem;
+}
+
+.footer a {
+  color: var(--purple-bg);
+}
+
+.footer-credits {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+}
+
+.footer-picture-credits {
+  text-align: center;
+  font-size: 0.75rem;
 }
 
 /* Desktop */
@@ -428,6 +456,10 @@ main {
 
   .about-team__staff {
     width: fit-content;
+  }
+
+  .contact-content {
+    flex-direction: row;
   }
 }
 
