@@ -81,7 +81,6 @@ main {
   height: 2px;
   width: 24px;
   position: relative;
-  z-index: 5;
   z-index: 100;
 }
 
@@ -109,6 +108,8 @@ main {
 
 .side-menu:checked ~ .hamburger .hamburger-line {
   background: transparent;
+  position: fixed;
+  right: 10px;
 }
 
 .side-menu:checked ~ .hamburger .hamburger-line::before {
