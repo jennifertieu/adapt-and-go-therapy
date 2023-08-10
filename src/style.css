@@ -1,5 +1,19 @@
 @import "normalize.css";
 
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 400;
+  src: url("./fonts/Montserrat-Regular.woff2") format("woff2"),
+    url("./fonts/Montserrat-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  font-weight: 400;
+  src: url("./fonts/PlayfairDisplay-Regular.woff2") format("woff2"),
+    url("./fonts/PlayfairDisplay-Regular.woff") format("woff");
+}
+
 * {
   box-sizing: border-box;
   --adapt-black: #232323;
@@ -141,7 +155,7 @@ main {
   height: 100%;
   width: 100%;
   position: relative;
-  background-image: url("./public/img/senior-man-nursing-home-with-doing-physical-therapy-with-help-from-nurse-using-dumbbells.jpg");
+  background-image: url("./img/senior-man-nursing-home-with-doing-physical-therapy-with-help-from-nurse-using-dumbbells.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
