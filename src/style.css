@@ -5,6 +5,7 @@
   font-weight: 400;
   src: url("./fonts/Montserrat-Regular.woff2") format("woff2"),
     url("./fonts/Montserrat-Regular.woff") format("woff");
+  font-display: swap;
 }
 
 @font-face {
@@ -12,6 +13,7 @@
   font-weight: 500;
   src: url("./fonts/Montserrat-Medium.woff2") format("woff2"),
     url("./fonts/Montserrat-Medium.woff") format("woff");
+  font-display: swap;
 }
 
 @font-face {
@@ -19,6 +21,7 @@
   font-weight: 600;
   src: url("./fonts/Montserrat-SemiBold.woff2") format("woff2"),
     url("./fonts/Montserrat-SemiBold.woff") format("woff");
+  font-display: swap;
 }
 
 @font-face {
@@ -26,6 +29,7 @@
   font-weight: 700;
   src: url("./fonts/Montserrat-Bold.woff2") format("woff2"),
     url("./fonts/Montserrat-Bold.woff") format("woff");
+  font-display: swap;
 }
 
 @font-face {
@@ -33,6 +37,7 @@
   font-weight: 400;
   src: url("./fonts/PlayfairDisplay-Regular.woff2") format("woff2"),
     url("./fonts/PlayfairDisplay-Regular.woff") format("woff");
+  font-display: swap;
 }
 
 * {
@@ -148,8 +153,8 @@ main {
 
 .side-menu:checked ~ .hamburger .hamburger-line {
   background: transparent;
-  position: fixed;
-  right: 10px;
+  /* position: fixed;
+  right: 10px; */
 }
 
 .side-menu:checked ~ .hamburger .hamburger-line::before {
