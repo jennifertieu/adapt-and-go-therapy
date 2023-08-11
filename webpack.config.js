@@ -1,6 +1,31 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
+const webpack = require("webpack");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const devMode = process.env.NODE_ENV !== "production";
+
+const plugins = [
+  new MiniCssExtractPlugin({
+    // Options similar to the same options in webpackOptions.output
+    // both options are optional
+    filename: devMode ? "./dist/[name].css" : "./dist/[name].[contenthash].css",
+    chunkFilename: devMode
+      ? "./dist/[id].css"
+      : "./dist/[id].[contenthash].css",
+  }),
+  new HtmlWebpackPlugin({
+    template: "./src/index.html",
+    filename: "index.html",
+    inject: "body",
+  }),
+];
+if (devMode) {
+  // only enable hot in development
+  plugins.push(new webpack.HotModuleReplacementPlugin());
+}
 
 module.exports = {
   entry: "./src/index.js",
@@ -17,7 +42,11 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        use: [
+          devMode ? "style-loader" : MiniCssExtractPlugin.loader,
+          ,
+          { loader: "css-loader", options: { sourceMap: true } },
+        ],
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
@@ -29,15 +58,12 @@ module.exports = {
       },
     ],
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: "./src/index.html",
-      filename: "index.html",
-      inject: "body",
-    }),
-  ],
+  plugins,
   optimization: {
+    minimize: true,
     minimizer: [
+      // new CssMinimizerPlugin(),
+      new TerserPlugin(),
       new ImageMinimizerPlugin({
         minimizer: {
           implementation: ImageMinimizerPlugin.sharpMinify,
