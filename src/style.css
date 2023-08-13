@@ -46,7 +46,7 @@
   --gold-bg: #c17b00;
   --purple-bg: #5a6cc4;
   --purple-bg-hover: #4c67e0;
-  --light-link: #add8e6;
+  --light-link: #7087f7;
   scroll-behavior: smooth;
 }
 
@@ -92,7 +92,7 @@ main {
   gap: 1rem;
   max-width: 0;
   list-style: none;
-  width: 50%;
+  width: 30%;
   height: 100%;
   overflow: hidden;
   top: 0;
@@ -441,7 +441,7 @@ main {
 }
 
 .contact a {
-  color: var(--purple-bg);
+  color: var(--light-link);
 }
 
 .contact-content {
@@ -477,7 +477,7 @@ main {
 }
 
 .footer a {
-  color: var(--purple-bg);
+  color: var(--light-link);
 }
 
 .footer-credits {
@@ -488,7 +488,7 @@ main {
 
 .footer-picture-credits {
   text-align: center;
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.6);
   font-size: 0.6rem;
 }
 
