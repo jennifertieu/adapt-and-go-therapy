@@ -65,6 +65,11 @@ main {
   flex-direction: column;
 }
 
+/* Shared */
+.section-spacing {
+  padding: 2.5rem 1rem;
+}
+
 /* Navbar */
 .navigation {
   width: 100%;
@@ -76,6 +81,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 2rem;
 }
 
 .nav-menu {
@@ -109,7 +115,7 @@ main {
 }
 
 #logo {
-  max-width: 40%;
+  max-width: 15rem;
   display: block;
 }
 
@@ -140,6 +146,7 @@ main {
   content: "";
   display: block;
   position: absolute;
+  right: 0;
   transition: all 0.2s ease-out;
   width: 100%;
   height: 100%;
@@ -178,7 +185,7 @@ main {
 /* Hero */
 .hero {
   width: 100%;
-  height: 725px;
+  height: 650px;
   position: relative;
 }
 
@@ -261,13 +268,18 @@ main {
   width: inherit;
 }
 
-.about-content {
+.about-content,
+.about-team {
   display: flex;
-  padding: 50px;
+  /* padding: 2.5rem 1rem; */
   width: inherit;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+}
+
+.about-content {
+  display: flex;
   background-color: var(--gold-bg);
 }
 
@@ -281,14 +293,7 @@ main {
 }
 
 .about-team {
-  width: inherit;
   flex-shrink: 0;
-  padding: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  overflow: hidden;
   flex-wrap: nowrap;
   gap: 4px;
 }
@@ -301,7 +306,7 @@ main {
   font-style: normal;
   font-family: "Playfair Display", serif;
   color: #000000;
-  font-size: 3rem;
+  font-size: 2rem;
   letter-spacing: 0em;
   line-height: 1.2;
   text-align: center;
@@ -355,7 +360,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 80px 40px;
+  /* padding: 2.5rem 1rem; */
   background-color: #ffffff;
   overflow: hidden;
   align-content: center;
@@ -381,8 +386,7 @@ main {
 }
 
 .services-container__card {
-  flex-shrink: 0;
-  width: 320px;
+  max-width: 320px;
   height: min-content;
   display: flex;
   flex-direction: column;
@@ -419,7 +423,7 @@ main {
 /* Contact */
 .contact {
   width: 100%;
-  padding: 4rem 2rem;
+  /* padding: 4rem 2rem; */
   background-color: var(--adapt-black);
   color: #fff;
 }
@@ -509,12 +513,21 @@ main {
 
   .about-content,
   .about-team {
-    padding: 100px;
+    padding: 6.25rem;
+  }
+
+  .services {
+    padding: 5rem 2.5rem;
   }
 
   .about-content__text,
   .about-content__details-wrapper {
     width: 60%;
+  }
+
+  .about-team__text,
+  .about-content__text {
+    font-size: 3rem;
   }
 
   .contact-content {
