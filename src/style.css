@@ -53,6 +53,7 @@
 html,
 body {
   height: 100%;
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
@@ -257,7 +258,7 @@ main {
   width: 100%;
   display: flex;
   flex-direction: column;
-  flex: 1 0 0px;
+  flex: 1 0 0;
   flex-wrap: nowrap;
 }
 
@@ -279,7 +280,6 @@ main {
 .about-content,
 .about-team {
   display: flex;
-  /* padding: 2.5rem 1rem; */
   width: inherit;
   flex-direction: column;
   justify-content: flex-start;
