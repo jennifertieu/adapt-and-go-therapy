@@ -30,7 +30,7 @@ if (devMode) {
 module.exports = {
   entry: "./src/index.js",
   output: {
-    filename: "bundle.js",
+    filename: "[name].[contenthash].js",
     path: path.resolve(__dirname, "dist"),
     clean: true,
   },
@@ -60,6 +60,16 @@ module.exports = {
   },
   plugins,
   optimization: {
+    runtimeChunk: "single",
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: "vendors",
+          chunks: "all",
+        },
+      },
+    },
     minimize: true,
     minimizer: [
       // new CssMinimizerPlugin(),
