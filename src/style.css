@@ -47,6 +47,7 @@
   --purple-bg: #6a80e6;
   --purple-bg-hover: #4c67e0;
   --light-link: #add8e6;
+  scroll-behavior: smooth;
 }
 
 html,
@@ -68,7 +69,7 @@ main {
 .navigation {
   width: 100%;
   background-color: var(--adapt-black);
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
 .navbar {
@@ -108,11 +109,15 @@ main {
 }
 
 #logo {
-  max-width: 50%;
+  max-width: 40%;
+  display: block;
 }
 
 #logo img {
   width: 100%;
+  padding: 0;
+  margin: 0;
+  display: block;
 }
 
 /* Menu Icon */
@@ -153,8 +158,8 @@ main {
 
 .side-menu:checked ~ .hamburger .hamburger-line {
   background: transparent;
-  /* position: fixed;
-  right: 10px; */
+  position: fixed;
+  right: 10px;
 }
 
 .side-menu:checked ~ .hamburger .hamburger-line::before {
@@ -488,10 +493,6 @@ main {
 
   .hamburger {
     display: none;
-  }
-
-  #logo {
-    max-width: 100%;
   }
 
   .hero-heading {
