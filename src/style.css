@@ -53,7 +53,7 @@
 html,
 body {
   height: 100%;
-  width: 100%;
+  overflow: auto;
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
@@ -310,7 +310,6 @@ main {
 .about-team__text,
 .about-content__text {
   word-wrap: break-word;
-  overflow: visible;
   font-weight: 400;
   font-style: normal;
   font-family: "Playfair Display", serif;
@@ -369,7 +368,6 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* padding: 2.5rem 1rem; */
   background-color: #ffffff;
   overflow: hidden;
   align-content: center;
@@ -386,7 +384,6 @@ main {
   justify-content: center;
   align-items: center;
   max-width: 100%;
-  overflow: visible;
   position: relative;
   padding: 0;
   align-content: center;
