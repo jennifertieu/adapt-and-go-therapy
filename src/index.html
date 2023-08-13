@@ -3,17 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
     <link rel="icon" href="./favicon.ico" />
     <link rel="stylesheet" href="./style.css" />
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"> -->
-<!--[if (lt IE 9)]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.helper.ie8.js"></script><![endif]-->
+    <style>
+      .no-js {
+        visibility: visible;
+      }
+    </style>
     <title>Adapt and Go Therapy</title>
     <meta name="description" content="Houston Home Health Therapy Staffing" />
   </head>
-  <body>
-
-      <header class="navigation">
+  <body style="visibility: hidden" class="no-js">
+    <header class="navigation">
       <nav class="navbar">
         <a id="logo" href="/">
           <img
@@ -43,8 +48,7 @@
     </header>
     <main>
       <section id="hero" class="hero">
-        <article class="hero-image">
-        </article>
+        <article class="hero-image"></article>
         <div class="hero-cover">
           <h1 class="hero-heading">EMPOWERING LIVES, HEALING HOMES</h1>
           <div class="hero-text">Where licensed therapists come to you</div>
@@ -77,63 +81,52 @@
             </div>
           </div>
         </article>
-        <article class="about-team  section-spacing">
+        <article class="about-team section-spacing">
           <div class="about-wrapper">
             <div class="about-team__text">
               We&apos;re the dynamic team behind your health breakthroughs!
             </div>
-            <div class="about-team__staff">
-              <div class="about-team__staff-card">
-              <picture>
-                <source srcset="./img/kiet-le.webp" type="image/webp"                 width="300px"
-                height="400px"/>
-                <img
-                class="about-team__staff-image"
-                src="./img/kiet-le.png"
-                alt="Staff Image"
-                width="300px"
-                height="400px"
-              />
-              </picture>
-                <div class="about-team__staff-text">
-                  <h2 class="about-team__staff-heading">Kiet Le</h2>
-                  <p class="about-team__staff-description">CEO, OTR/L</p>
-                </div>
-              </div>
             <div class="about-team__staff-card">
               <picture>
-                <source srcset="./img/taylor-woodall.webp" type="image/webp"                 width="300px"
-                height="400px"/>
+                <source
+                  srcset="./img/taylor-woodall.webp"
+                  type="image/webp"
+                  width="300px"
+                  height="400px"
+                />
                 <img
-                class="about-team__staff-image"
-                src="./img/taylor-woodall.png"
-                alt="Staff Image"
-                width="300px"
-                height="400px"
-              />
+                  class="about-team__staff-image"
+                  src="./img/taylor-woodall.png"
+                  alt="Staff Image"
+                  width="300px"
+                  height="400px"
+                />
               </picture>
               <div class="about-team__staff-text">
-                  <h2 class="about-team__staff-heading">Taylor Woodall</h2>
-                  <p class="about-team__staff-description">PTA</p>
+                <h2 class="about-team__staff-heading">Taylor Woodall</h2>
+                <p class="about-team__staff-description">PTA</p>
               </div>
             </div>
             <div class="about-team__staff-card">
               <picture>
-                <source srcset="./img/jisan-lim.webp" type="image/webp"                 width="300px"
-                height="400px"/>
+                <source
+                  srcset="./img/jisan-lim.webp"
+                  type="image/webp"
+                  width="300px"
+                  height="400px"
+                />
                 <img
-                class="about-team__staff-image"
-                src="./img/jisan-lim.png"
-                alt="Staff Image"
-                width="300px"
-                height="400px"
-              />
+                  class="about-team__staff-image"
+                  src="./img/jisan-lim.png"
+                  alt="Staff Image"
+                  width="300px"
+                  height="400px"
+                />
               </picture>
-
-                <div class="about-team__staff-text">
-                  <h2 class="about-team__staff-heading">Jisan Lim</h2>
-                  <p class="about-team__staff-description">OTR/L</p>
-                </div>
+              <div class="about-team__staff-text">
+                <h2 class="about-team__staff-heading">Jisan Lim</h2>
+                <p class="about-team__staff-description">OTR/L</p>
+              </div>
             </div>
           </div>
         </article>
@@ -248,6 +241,9 @@
         on Freepik
       </div>
     </footer>
+    <script>
+      document.querySelector("body").classList.remove("no-js");
+    </script>
     <noscript>Your browser does not support JavaScript</noscript>
   </body>
 </html>
