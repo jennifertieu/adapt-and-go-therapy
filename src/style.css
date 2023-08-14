@@ -267,12 +267,12 @@ main {
 }
 
 .about-wrapper {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   justify-content: center;
   align-items: center;
-  max-width: 1600px;
-  gap: 3rem;
+  max-width: 1400px;
+  gap: 2rem;
 }
 
 .about-heading {
@@ -524,11 +524,6 @@ main {
     padding: 6.25rem;
   }
 
-  .about-content__text,
-  .about-content__details-wrapper {
-    width: 60%;
-  }
-
   .about-team__text,
   .about-content__text {
     font-size: 3rem;
@@ -540,12 +535,10 @@ main {
 }
 @media screen and (min-width: 1500px) {
   .about-wrapper {
-    flex-direction: row;
-    gap: 1rem;
+    grid-template-columns: 500px 1fr;
   }
   .about-content__text,
   .about-team__text {
-    max-width: 600px;
     text-align: left;
   }
 }
