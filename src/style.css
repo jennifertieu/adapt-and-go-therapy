@@ -200,17 +200,10 @@ main {
   width: 100%;
   height: 650px;
   position: relative;
-}
-
-.hero-image {
-  height: 100%;
-  width: 100%;
-  position: relative;
   background-image: url("./img/senior-man-nursing-home-with-doing-physical-therapy-with-help-from-nurse-using-dumbbells.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  object-position: center top;
 }
 
 .hero-cover {
