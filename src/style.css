@@ -268,12 +268,6 @@ main {
   gap: 2rem;
 }
 
-.about-heading {
-  color: #fff;
-  text-align: center;
-  width: inherit;
-}
-
 .about-content,
 .about-team {
   display: flex;
