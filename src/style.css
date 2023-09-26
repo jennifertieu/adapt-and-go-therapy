@@ -70,11 +70,6 @@ main {
   flex-direction: column;
 }
 
-/* Shared */
-.section-spacing {
-  padding: 2.5rem 1rem;
-}
-
 /* Navbar */
 .navigation {
   width: 100%;
@@ -251,50 +246,18 @@ main {
 }
 
 /* About */
-.about {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  flex: 1 0 0;
-  flex-wrap: nowrap;
-}
-
-.about-wrapper {
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-content: center;
-  align-items: center;
-  max-width: 1400px;
-  gap: 2rem;
-}
-
 .about-content,
 .about-team {
   display: flex;
-  width: inherit;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.about-content {
-  display: flex;
-  background-color: var(--gold-bg);
-}
-
-.about-content__details-wrapper {
-  width: 100%;
+  justify-content: center;
+  max-width: 80rem;
+  padding: 4rem 2rem 0 2rem;
 }
 
 .about-content__details {
   line-height: 1.75;
   font-family: "Montserrat", sans-serif;
-}
-
-.about-team {
-  flex-shrink: 0;
-  flex-wrap: nowrap;
-  gap: 4px;
 }
 
 .about-team__text,
@@ -307,6 +270,9 @@ main {
   font-size: 2rem;
   letter-spacing: 0em;
   line-height: 1.2;
+}
+
+.about-team__text {
   text-align: center;
 }
 
@@ -351,31 +317,22 @@ main {
 
 /* Services */
 .services {
-  flex-shrink: 0;
-  width: 100%;
-  height: min-content;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #ffffff;
-  overflow: hidden;
-  align-content: center;
-  flex-wrap: nowrap;
-  gap: 60px;
+  text-align: center;
+  padding: 7rem 2rem;
+}
+
+.services h2 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
 }
 
 .services-container {
   flex-shrink: 0;
-  width: 1000px;
-  height: min-content;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  max-width: 100%;
   position: relative;
-  padding: 0;
   align-content: center;
   flex-wrap: wrap;
   gap: 1.25rem;
@@ -419,14 +376,14 @@ main {
 /* Contact */
 .contact {
   width: 100%;
-  /* padding: 4rem 2rem; */
   background-color: var(--adapt-black);
   color: #fff;
 }
 
 .contact h2 {
   text-align: center;
-  margin-bottom: 3rem;
+  font-size: 2rem;
+  margin: 3rem 0;
 }
 
 .contact a {
@@ -507,10 +464,6 @@ main {
     font-size: 1.5rem;
   }
 
-  .section-spacing {
-    padding: 6.25rem;
-  }
-
   .about-team__text,
   .about-content__text {
     font-size: 3rem;
@@ -518,15 +471,6 @@ main {
 
   .contact-content {
     flex-direction: row;
-  }
-}
-@media screen and (min-width: 1500px) {
-  .about-wrapper {
-    grid-template-columns: 500px 1fr;
-  }
-  .about-content__text,
-  .about-team__text {
-    text-align: left;
   }
 }
 
