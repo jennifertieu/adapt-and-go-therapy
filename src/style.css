@@ -328,49 +328,25 @@ main {
 
 .services-container {
   flex-shrink: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  align-content: center;
-  flex-wrap: wrap;
-  gap: 1.25rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
 }
 
 .services-container__card {
-  max-width: 320px;
-  height: min-content;
+  max-width: 300px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   box-shadow: 0px 1px 3px -1px rgba(0, 0, 0, 0.05),
     0px 3px 8px -1px rgba(0, 0, 0, 0.05), 0px 7px 20px -2px rgba(0, 0, 0, 0.05),
     0px 20px 60px -3px rgba(0, 0, 0, 0.05);
-  background-color: #ffffff;
-  overflow: hidden;
-  position: relative;
   padding: 2rem;
-  align-content: center;
-  flex-wrap: nowrap;
-  gap: 0;
   border-radius: 20px;
 }
 
 .services-container__card-content {
-  box-sizing: border-box;
-  flex-shrink: 0;
-  width: 100%;
-  height: min-content;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
   padding: 1rem 0;
-  position: relative;
-  align-content: flex-start;
-  flex-wrap: nowrap;
 }
 
 /* Contact */
@@ -471,6 +447,9 @@ main {
 
   .contact-content {
     flex-direction: row;
+  }
+  .services-container {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
