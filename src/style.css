@@ -271,7 +271,7 @@ main {
   grid-template-columns: 1fr;
   justify-content: center;
   align-items: center;
-  max-width: 1400px;
+  max-width: 1500px;
   gap: 2rem;
 }
 
@@ -343,6 +343,7 @@ main {
 
 .about-team__staff-image {
   width: 100%;
+  object-fit: cover;
 }
 
 .about-team__staff-text {
