@@ -268,7 +268,7 @@ export default function Home() {
                   <HiMail className="text-2xl text-primary flex-shrink-0" />
                   <a
                     href="mailto:kleadaptgo@gmail.com"
-                    className="hover:text-accent transition-colors text-sm"
+                    className="hover:text-primary transition-colors text-sm"
                   >
                     kleadaptgo@gmail.com
                   </a>
@@ -277,7 +277,7 @@ export default function Home() {
                   <HiPhone className="text-2xl text-primary flex-shrink-0" />
                   <a
                     href="tel:346-593-0721"
-                    className="hover:text-accent transition-colors text-sm"
+                    className="hover:text-primary transition-colors text-sm"
                   >
                     346-593-0721
                   </a>
