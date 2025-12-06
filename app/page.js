@@ -135,16 +135,17 @@ export default function Home() {
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl">
           <h1
-            className={`${playfairDisplay.className} uppercase font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-6 text-white`}
+            className={`${playfairDisplay.className} uppercase font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-6 text-white opacity-0 animate-fadeIn`}
           >
             Empowering Lives, <br /> Healing Homes
           </h1>
-          <p className="mb-8 text-lg md:text-xl text-white font-light">
+          <p className="mb-8 text-lg md:text-xl text-white font-light opacity-0 animate-fadeIn" style={{ animationDelay: "0.3s" }}>
             Where licensed therapists come to you
           </p>
           <a
             href="mailto:kleadaptgo@gmail.com"
-            className="bg-primary text-base text-body px-10 py-3 rounded-md font-medium inline-block"
+            className="bg-primary text-base text-body px-10 py-3 rounded-md font-medium inline-block opacity-0 animate-fadeIn"
+            style={{ animationDelay: "0.6s" }}
           >
             Contact Us
           </a>
