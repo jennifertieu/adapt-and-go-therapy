@@ -37,7 +37,7 @@ export default function Home() {
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl">
           <h1
-            className={`${playfairDisplay.className} uppercase font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-6 text-white opacity-0 animate-fadeIn`}
+            className={`${playfairDisplay.className} uppercase font-bold text-3xl md:text-4xl lg:text-5xl mb-6 text-white opacity-0 animate-fadeIn`}
           >
             Empowering Lives, <br /> Healing Homes
           </h1>
