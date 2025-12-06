@@ -1,14 +1,10 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
-import LogoCropped from "/public/logo-cropped.svg";
-import Logo from "/public/logo.svg";
 import { Playfair_Display } from "next/font/google";
 import { FaDollarSign, FaHeart, FaUsers } from "react-icons/fa";
-import { HiMail, HiPhone } from "react-icons/hi";
-import { MdLocationOn } from "react-icons/md";
-import { HiMenu, HiX } from "react-icons/hi";
+import Footer from "../components/Footer";
+import Navigation from "../components/Navigation";
 import StaffMember from "../components/StaffMember";
 import Section from "../components/Section";
 import ServiceTile from "../components/ServiceTile";
@@ -22,116 +18,22 @@ const playfairDisplay = Playfair_Display({
 });
 
 export default function Home() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
   return (
     <main className="font-light">
-      <header className="bg-backgroundSecondary flex justify-between items-center p-4 w-full sticky top-0 z-50 shadow-sm">
-        <Image
-          priority
-          src={LogoCropped}
-          alt="Adapt and Go Therapy Logo"
-          className="sm:max-w-64 max-w-32"
-        />
-        <nav className="hidden md:flex gap-6 items-center">
-          <a
-            href="#about"
-            className="text-white hover:text-primary transition-colors"
-          >
-            About
-          </a>
-          <a
-            href="#services"
-            className="text-white hover:text-primary transition-colors"
-          >
-            Services
-          </a>
-          <a
-            href="#contact"
-            className="text-white hover:text-primary transition-colors"
-          >
-            Contact
-          </a>
-          <a
-            href="tel:346-593-0721"
-            className="text-white hover:text-primary transition-colors flex items-center gap-1"
-          >
-            <HiPhone className="text-lg" />
-            <span>346-593-0721</span>
-          </a>
-        </nav>
-        <button
-          className="md:hidden text-white"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label="Toggle menu"
-        >
-          {mobileMenuOpen ? (
-            <HiX className="text-2xl" />
-          ) : (
-            <HiMenu className="text-2xl" />
-          )}
-        </button>
-      </header>
-      {mobileMenuOpen && (
-        <nav className="md:hidden fixed inset-0 bg-backgroundSecondary z-[60] w-full h-full flex flex-col">
-          <div className="flex justify-between items-center p-4 border-b border-white/10">
-            <Image
-              src={LogoCropped}
-              alt="Adapt and Go Therapy Logo"
-              className="max-w-32"
-            />
-            <button
-              onClick={() => setMobileMenuOpen(false)}
-              className="text-white hover:text-primary transition-colors"
-              aria-label="Close menu"
-            >
-              <HiX className="text-2xl" />
-            </button>
-          </div>
-          <div className="flex flex-col p-4 gap-6 w-full max-w-sm mx-auto mt-8">
-            <a
-              href="#about"
-              onClick={() => setMobileMenuOpen(false)}
-              className="text-white hover:text-primary transition-colors text-left py-3 text-xl"
-            >
-              About
-            </a>
-            <a
-              href="#services"
-              onClick={() => setMobileMenuOpen(false)}
-              className="text-white hover:text-primary transition-colors text-left py-3 text-xl"
-            >
-              Services
-            </a>
-            <a
-              href="#contact"
-              onClick={() => setMobileMenuOpen(false)}
-              className="text-white hover:text-primary transition-colors text-left py-3 text-xl"
-            >
-              Contact
-            </a>
-            <a
-              href="tel:346-593-0721"
-              className="text-white hover:text-primary transition-colors text-left py-3 flex items-center gap-2 text-xl"
-            >
-              <HiPhone className="text-2xl" />
-              <span>346-593-0721</span>
-            </a>
-          </div>
-        </nav>
-      )}
+      <Navigation />
 
       {/* Hero Section */}
-      <section className="relative w-full h-screen flex items-center justify-center">
+      <section id="main-content" className="relative w-full h-screen flex items-center justify-center" aria-label="Hero section">
         <div className="absolute inset-0 z-0">
           <Image
             src="/img/women-helping-older-man-lift-weights.jpg"
-            alt="Therapist helping elderly man with physical therapy exercises"
+            alt="Licensed physical therapist assisting an elderly man with strength training exercises using weights in a home setting"
             fill
             priority
             className="object-cover"
+            sizes="100vw"
           />
-          <div className="absolute inset-0 bg-backgroundSecondary/50"></div>
+          <div className="absolute inset-0 bg-backgroundSecondary/50" aria-hidden="true"></div>
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl">
           <h1
@@ -144,8 +46,9 @@ export default function Home() {
           </p>
           <a
             href="mailto:kleadaptgo@gmail.com"
-            className="bg-primary text-base text-body px-10 py-3 rounded-md font-medium inline-block opacity-0 animate-fadeIn"
+            className="bg-primary text-base text-body px-10 py-3 rounded-md font-medium inline-block opacity-0 animate-fadeIn focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-backgroundSecondary"
             style={{ animationDelay: "0.6s" }}
+            aria-label="Contact us via email"
           >
             Contact Us
           </a>
@@ -153,17 +56,19 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <Section id="about" className="bg-white">
+      <Section id="about" className="bg-white" aria-labelledby="about-heading">
         <div className="max-w-screen-xl m-auto grid grid-cols-1 lg:grid-cols-2 items-center justify-center gap-12">
           <Image
             src="/img/social-worker-taking-care-old-woman.jpg"
-            alt="Social worker taking care of an old woman"
+            alt="Professional healthcare worker providing compassionate care and support to an elderly woman in a comfortable home environment"
             width={700}
             height={467}
             className="w-full h-auto rounded-lg"
+            sizes="(max-width: 1024px) 100vw, 50vw"
           />
           <div>
             <h2
+              id="about-heading"
               className={`${playfairDisplay.className} text-2xl lg:text-3xl font-bold text-body mb-6`}
             >
               Cost-efficient, Amazing Services
@@ -184,14 +89,15 @@ export default function Home() {
       </Section>
 
       {/* Services Section */}
-      <Section id="services">
+      <Section id="services" aria-labelledby="services-heading">
         <div className="max-w-screen-xl m-auto">
           <h2
+            id="services-heading"
             className={`${playfairDisplay.className} text-2xl lg:text-3xl font-bold mb-12 text-center`}
           >
             Services
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8" role="list">
             <ServiceTile
               icon={FaDollarSign}
               title="Cost Efficient"
@@ -212,14 +118,15 @@ export default function Home() {
       </Section>
 
       {/* Staff Section */}
-      <Section className="bg-background">
+      <Section className="bg-background" aria-labelledby="staff-heading">
         <div className="max-w-screen-xl m-auto">
           <h2
+            id="staff-heading"
             className={`${playfairDisplay.className} text-2xl lg:text-3xl font-bold text-body mb-12 text-center`}
           >
             We're the dynamic team behind your health breakthroughs!
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl m-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl m-auto" role="list">
             {STAFF_MEMBERS.map((member) => (
               <StaffMember
                 key={member.name}
@@ -234,83 +141,40 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* Footer */}
-      <footer id="contact" className="bg-backgroundSecondary text-white">
-        <div className="max-w-screen-xl mx-auto px-8 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
-            {/* Logo Section */}
-            <div className="flex flex-col items-center md:items-start">
-              <Image
-                src={Logo}
-                alt="Adapt and Go Therapy Logo"
-                className="max-w-48 mb-6"
-              />
-            </div>
-
-            {/* Contact Information */}
-            <div className="space-y-6">
-              <h3
-                className={`${playfairDisplay.className} text-xl font-bold mb-4 text-left`}
+      <Section id="contact" aria-labelledby="contact-heading" className="bg-white">
+        <div className="max-w-screen-xl m-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <Image
+              src="/img/old-woman-nursing-home-laughing-while-doctor-taking-notes-clipboard.jpg"
+              alt="Old woman laughing while doctor taking notes on clipboard"
+              width={700}
+              height={467}
+              className="w-full h-auto rounded-lg"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+            <div>
+              <h2
+                id="contact-heading"
+                className={`${playfairDisplay.className} text-2xl lg:text-3xl font-bold text-body mb-6`}
               >
-                Contact Us
-              </h3>
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <MdLocationOn className="text-2xl text-primary flex-shrink-0 mt-0.5" />
-                  <div>
-                    <p className="text-sm leading-relaxed">
-                      17350 State Hwy 249, Ste 220 #14615
-                      <br />
-                      Houston, Texas 77064
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <HiMail className="text-2xl text-primary flex-shrink-0" />
-                  <a
-                    href="mailto:kleadaptgo@gmail.com"
-                    className="hover:text-primary transition-colors text-sm"
-                  >
-                    kleadaptgo@gmail.com
-                  </a>
-                </div>
-                <div className="flex items-center gap-3">
-                  <HiPhone className="text-2xl text-primary flex-shrink-0" />
-                  <a
-                    href="tel:346-593-0721"
-                    className="hover:text-primary transition-colors text-sm"
-                  >
-                    346-593-0721
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* Additional spacing column for larger screens */}
-            <div className="hidden lg:block"></div>
-          </div>
-
-          {/* Divider */}
-          <div className="border-t border-white/10 mb-8"></div>
-
-          {/* Copyright */}
-          <div className="text-center flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-white/70">
-              © {new Date().getFullYear()} Adapt and Go Therapy LLC. All rights
-              reserved.
-            </p>
-            <p className="text-xs text-white/70">
+                Ready to Transform Your Health Journey?
+              </h2>
+              <p className="text-lg text-body mb-8 leading-relaxed">
+                Take the first step towards better health and independence. Our licensed therapists bring exceptional, personalized care directly to your home throughout the Greater Houston Area. Your path to wellness starts with a simple conversation.
+              </p>
               <a
-                href="https://www.freepik.com/free-photo/senior-man-nursing-home-with-doing-physical-therapy-with-help-from-nurse-using-dumbbells_28837991.htm#page=2&query=occupational%20therapy&position=11&from_view=keyword&track=ais"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="mailto:kleadaptgo@gmail.com"
+                className="bg-primary text-base text-body px-10 py-3 rounded-md font-medium inline-block focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-white transition-colors hover:bg-primary/90"
+                aria-label="Contact us via email to start your therapy journey"
               >
-                Image by DCStudio on Freepik
+                Get Started Today
               </a>
-            </p>
+            </div>
           </div>
         </div>
-      </footer>
+      </Section>
+
+      <Footer />
     </main>
   );
 }

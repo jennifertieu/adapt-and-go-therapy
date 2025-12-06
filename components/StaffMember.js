@@ -21,7 +21,7 @@ export default function StaffMember({
   imageSize = "w-56 h-56",
 }) {
   return (
-    <div className="text-center grid">
+    <article className="text-center grid" role="listitem">
       <div
         className={`relative ${imageSize} m-auto mb-4 rounded-full overflow-hidden ${
           !imageSrc ? "bg-secondary flex items-center justify-center" : ""
@@ -30,17 +30,18 @@ export default function StaffMember({
         {imageSrc ? (
           <Image
             src={imageSrc}
-            alt={name}
+            alt={`${name}, ${title} at Adapt and Go Therapy`}
             fill
             className="object-cover"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           />
         ) : (
-          <span className="text-4xl text-body">{initials || "?"}</span>
+          <span className="text-4xl text-body" aria-label={`${name} profile picture placeholder`}>{initials || "?"}</span>
         )}
       </div>
       <h3 className="text-xl font-semibold text-body">{name}</h3>
       <p className="text-body">{title}</p>
-    </div>
+    </article>
   );
 }
 
